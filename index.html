@@ -1,0 +1,87 @@
+---
+layout: default
+title: Home
+---
+<div class="docs-section" id="bio">
+  <h4>Bio</h4>
+  <p>
+  I am a student developer and researcher at <b>Korea International School</b>, deeply interested in the intersection of <b>artificial intelligence, economics, and ethics</b>. 
+  My work focuses on developing practical mobile applications and utilizing machine learning for financial forecasting and social utility. 
+  I am the Creator and Lead Developer of <b>SnapPrice</b>, an Android app utilizing OCR and ML to empower rational consumer consumption, and I serve as the Director of the Korea Chapter for <b>Curiosity Creators</b>, aiming to gamify STEM education for young students globally.
+  </p>
+
+  <p>
+  My recent research applies advanced AI architectures to complex economic problems, such as combining Transformers and LLMs to solve the "Persistence Trap" in stock prediction and utilizing hybrid LSTM-LLM frameworks to forecast macroeconomic indicators like the 10-Year Treasury Yield. Beyond research and development, I actively lead the KIS Makers Club and engage in competitive badminton, chess, and mixed martial arts.
+  </p> 
+</div>
+
+<div class="docs-section" id="research">
+  <h4>Research</h4>
+
+  <div class="paper">
+    <p class="title"><b>Overcoming the Persistence Trap in Stock Prediction: A Multi-Modal Approach Using Transformers and LLMs</b></p>
+    <p>Lead Researcher, Korea Science and Engineering Fair (KSEF)</p>
+    <p><i>Developed a novel Multi-Modal AI architecture combining Transformers for time-series analysis and LLMs for financial sentiment analysis. Successfully reduced predictive autocorrelation from 0.9998 to 0.1575.</i></p>
+  </div>
+
+  <div class="paper">
+    <p class="title"><b>A Hybrid LSTM-LLM Framework for 10-Year Treasury Yield Forecasting</b></p>
+    <p>Lead Researcher, Independent Research</p>
+    <p><i>Engineered a predictive architecture integrating Long Short-Term Memory (LSTM) networks with LLM-generated sentiment analysis to forecast complex macroeconomic indicators, outperforming traditional econometric models.</i></p>
+  </div>
+</div>
+
+<div class="docs-section" id="apps">
+  <h4>App Development</h4>
+
+  <ul class="tab-nav">
+    <li><div class="button active" data-ref="#apps-selected">Selected</div></li>
+    <li><div class="button" data-ref="#apps-all">All</div></li>
+  </ul>
+
+  <div class="tab-content">
+    <div class="tab-pane active" id="apps-selected">
+      <div class="row">
+        
+        <div class="six columns">
+          <div class="project-container">
+            <div class="project-image-container">
+              <a href="#">
+                <img src="{{ '/assets/images/snapprice_thumb.jpg' | prepend: site.baseurl }}" class="u-max-full-width" alt="SnapPrice">
+              </a>
+            </div>
+            <div class="project-caption">
+              <b>SnapPrice (Android App)</b> <br/>
+              Built a native Android interface utilizing Google ML Kit for barcode OCR and Firebase Firestore. Implemented a "Buy vs. Wait" decision algorithm.
+            </div>
+          </div>
+        </div>
+
+        <div class="six columns">
+          <div class="project-container">
+            <div class="project-image-container">
+              <a href="#">
+                <img src="{{ '/assets/images/cc_app_thumb.jpg' | prepend: site.baseurl }}" class="u-max-full-width" alt="Curiosity Creators App">
+              </a>
+            </div>
+            <div class="project-caption">
+              <b>Curiosity Creators AI Lesson Planner</b> <br/>
+              Developed an application utilizing AI to dynamically generate customized STEM lesson plans based on varied student evaluations.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="tab-pane" id="apps-all">
+      <p><i>Additional technical projects and production roadmap coming soon.</i></p>
+    </div>
+
+  </div>
+</div>
+
+<div class="docs-section" id="resume">
+  <h4>Resume</h4>
+  <p>Full Resume available in <a href="{{ '/assets/cv/Yeonjun_Lee_CV.pdf' | prepend: site.baseurl }}" target="_blank">PDF</a>.</p>
+</div>
