@@ -57,18 +57,36 @@ h4 {
   margin-bottom: 30px;
 }
 .project-image-container {
-  border: 1px solid rgba(0,0,0,0.2);
-  padding: 3px;
-  transition: 0.3s;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 8px;
+  padding: 16px;
+  background: #fbfbfb;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  overflow: hidden;
+}
+.project-image-container img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .project-image-container:hover {
-  transition: 0.3s;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  border-color: rgba(0,0,0,0.12);
+  background: #ffffff;
 }
 .project-image-container:hover img {
-  opacity: 0.4;
+  transform: scale(1.03);
 }
 .project-caption {
-  padding: 3px;
+  padding: 10px 4px;
+  line-height: 1.5;
 }
 
 /* Larger than phone */
@@ -190,4 +208,39 @@ h4 {
   .popover-link:hover,
   .popover-item:first-child .popover-link:hover:after {
     border-bottom-color: #33C3F0; }
+}
+
+/* Typewriter animation styling */
+.typewriter-bio {
+  font-style: italic;
+  color: #888;
+  font-size: 0.9em;
+  margin-top: 1.5rem;
+  min-height: 24px;
+}
+
+.typewriter-cursor {
+  font-weight: 300;
+  color: #888;
+  animation: typewriter-blink 1s step-end infinite;
+  margin-left: 2px;
+}
+
+@keyframes typewriter-blink {
+  from, to { color: transparent; }
+  50% { color: #888; }
+}
+
+.academic-date {
+  text-align: right;
+  font-style: italic;
+  color: #888;
+}
+
+@media (max-width: 550px) {
+  .academic-date {
+    text-align: left;
+    margin-top: -4px;
+    margin-bottom: 12px;
+  }
 }

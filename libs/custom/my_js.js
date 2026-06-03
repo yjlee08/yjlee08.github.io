@@ -24,6 +24,7 @@ $(document).ready(function() {
     $document.on('click', closePopover)
     $('a[href^="#"]').on('click', smoothScroll)
     buildSnippets();
+    initTypewriter();
   }
 
   function smoothScroll(e) {
@@ -86,6 +87,48 @@ $(document).ready(function() {
       var newContent = escapeHtml($(this).html())
       $(this).html(newContent)
     })
+  }
+
+  function initTypewriter() {
+    var phrases = [
+      "How do we push the limits of AI, design it around human needs, and ensure our purpose remains ethical?"
+    ];
+    
+    var phraseIndex = 0;
+    var characterIndex = 0;
+    var isDeleting = false;
+    var $textEl = $("#typewriter-text");
+    
+    if ($textEl.length === 0) return;
+
+    function type() {
+      var currentPhrase = phrases[phraseIndex];
+      
+      if (isDeleting) {
+        characterIndex--;
+        $textEl.text(currentPhrase.substring(0, characterIndex));
+        
+        if (characterIndex === 0) {
+          isDeleting = false;
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+          setTimeout(type, 500);
+        } else {
+          setTimeout(type, 30);
+        }
+      } else {
+        characterIndex++;
+        $textEl.text(currentPhrase.substring(0, characterIndex));
+        
+        if (characterIndex === currentPhrase.length) {
+          isDeleting = true;
+          setTimeout(type, 2500);
+        } else {
+          setTimeout(type, 75);
+        }
+      }
+    }
+    
+    type();
   }
 
 
