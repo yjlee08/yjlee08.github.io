@@ -2,7 +2,7 @@ source:       .
 destination:  ./_site
 includes:     ./_includes
 baseurl: ""
-url: "https://yjl124.github.io"
+url: "https://yjlee08.github.io"
 
 collections:
   projects:
