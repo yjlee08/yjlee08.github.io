@@ -562,3 +562,31 @@ h4 {
   background: rgba(255, 255, 255, 0.2);
   transform: scale(1.05);
 }
+
+/* Navbar CTA Button Style */
+.navbar-link.navbar-cta {
+  border: 1.5px solid var(--accent);
+  color: var(--accent) !important;
+  padding: 0 16px;
+  height: 32px;
+  line-height: 29px; /* Centered inside 32px height with 1.5px border */
+  border-radius: 16px;
+  margin-top: 16.5px;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  transition: all 0.25s ease;
+  letter-spacing: .2rem;
+  box-sizing: border-box;
+}
+
+.navbar-link.navbar-cta:hover {
+  background: var(--accent);
+  color: #fff !important;
+  box-shadow: 0 4px 12px rgba(15, 110, 86, 0.15);
+}
+
+.navbar-link.navbar-cta.active {
+  background: var(--accent);
+  color: #fff !important;
+}

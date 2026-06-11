@@ -18,7 +18,7 @@
 
   <link rel="stylesheet" href={{ "/libs/external/skeleton/normalize.css" | prepend: site.baseurl }}>
   <link rel="stylesheet" href={{ "/libs/external/skeleton/skeleton.css" | prepend: site.baseurl }}>
-  <link rel="stylesheet" href={{ "/libs/custom/my_css.css?v=3" | prepend: site.baseurl }}>
+  <link rel="stylesheet" href={{ "/libs/custom/my_css.css?v=4" | prepend: site.baseurl }}>
 
   <script src={{ "/libs/external/jquery-3.1.1.min.js" | prepend: site.baseurl }}></script>
 
@@ -61,7 +61,7 @@
           <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#bio" | prepend: site.baseurl }}>Bio</a></li>
           <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#research" | prepend: site.baseurl }}>Research</a></li>
           <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#apps" | prepend: site.baseurl }}>Apps</a></li>
-          <li class="navbar-item"><a class="navbar-link{% if page.url == '/projects.html' %} active{% endif %}" href={{ "/projects.html" | prepend: site.baseurl }}>Certs & Projects</a></li>
+          <li class="navbar-item"><a class="navbar-link{% if page.url == '/projects.html' %} active{% endif %} navbar-cta" href={{ "/projects.html" | prepend: site.baseurl }}>Certs & Projects</a></li>
           <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#resume" | prepend: site.baseurl }}>Resume</a></li>
         </ul>
       </div>
