@@ -5,7 +5,7 @@ title: Certs & Projects
 
 <div class="docs-section">
   <h4 style="margin-bottom: 8px;">Certificates & Side Projects</h4>
-  <p style="color: #666; font-size: 1.5rem; margin-bottom: 24px;">A curated archive of science fairs, honors, hackathons, and smaller technical side projects.</p>
+  <p style="color: #666; font-size: 1.5rem; margin-bottom: 24px;">Your collection of certificates, awards, hackathons, and small side projects.</p>
 
   <!-- Filter Pills -->
   <ul class="filter-nav">
@@ -16,151 +16,46 @@ title: Certs & Projects
 
   <!-- Responsive Grids -->
   <div class="projects-grid">
+    <!-- 
+      TEMPLATE FOR A SIDE PROJECT / HACKATHON CARD:
+      
+      <div class="custom-card side-project">
+        <div class="card-img-container">
+          <img src="{{ '/assets/img/YOUR_PROJECT_IMAGE.png' | prepend: site.baseurl }}" alt="Project Name">
+        </div>
+        <div class="award-badge">
+          <i class="fa-solid fa-trophy"></i> 1st Place - Hackathon Name
+        </div>
+        <div class="card-title">Project Name</div>
+        <div class="card-meta">Role / Team | Date</div>
+        <div class="card-desc">
+          Describe what you built, what problem it solves, and your contributions.
+        </div>
+        <div class="badge-container">
+          <span class="tech-tag">Tech1</span>
+          <span class="tech-tag">Tech2</span>
+        </div>
+        <div class="card-buttons">
+          <a href="#" class="button button-primary"><i class="fa-solid fa-code"></i> Code</a>
+          <a href="#" class="button"><i class="fa-solid fa-play"></i> Demo</a>
+        </div>
+      </div>
+    -->
 
-    <!-- PROJECT: Economic Hackathon Simulator -->
-    <div class="custom-card side-project">
-      <div class="card-img-container">
-        <img src="{{ '/assets/img/econ_hackathon.png' | prepend: site.baseurl }}" alt="Economic Hackathon Simulator">
+    <!-- 
+      TEMPLATE FOR A CERTIFICATE / HONOR CARD (Click-to-Zoom Lightbox enabled):
+      
+      <div class="custom-card certificate cert-card">
+        <div class="card-img-container">
+          <img src="{{ '/assets/img/YOUR_CERTIFICATE_IMAGE.png' | prepend: site.baseurl }}" alt="Certificate Name">
+        </div>
+        <div class="card-title">Certificate / Award Title</div>
+        <div class="card-meta">Issuing Organization | Date</div>
+        <div class="card-desc">
+          Briefly describe what this certificate was awarded for and the achievements behind it.
+        </div>
       </div>
-      <div class="award-badge">
-        <i class="fa-solid fa-trophy"></i> 1st Place - KIS Makers AI Hackathon
-      </div>
-      <div class="card-title">Multi-Agent Economics Simulator</div>
-      <div class="card-meta">Hackathon Project | Spring 2025</div>
-      <div class="card-desc">
-        Developed a simulation platform in a high-intensity 24-hour sprint to model macroeconomic pricing spirals. Implemented multi-agent systems where individual LLM agents represented consumers, commercial banks, and central banks, testing behavioral pricing strategies under supply shocks.
-      </div>
-      <div class="badge-container">
-        <span class="tech-tag">Python</span>
-        <span class="tech-tag">OpenAI API</span>
-        <span class="tech-tag">Flask</span>
-        <span class="tech-tag">Tailwind CSS</span>
-      </div>
-      <div class="card-buttons">
-        <a href="#" class="button button-primary"><i class="fa-solid fa-code"></i> Code</a>
-        <a href="#" class="button"><i class="fa-solid fa-play"></i> Demo</a>
-      </div>
-    </div>
-
-    <!-- PROJECT: Chatbot Audit -->
-    <div class="custom-card side-project">
-      <div class="card-img-container">
-        <img src="{{ '/assets/img/chatbot_audit.png' | prepend: site.baseurl }}" alt="UChicago Chatbot Audit">
-      </div>
-      <div class="award-badge">
-        <i class="fa-solid fa-award"></i> Academic Project
-      </div>
-      <div class="card-title">Socio-Ethical LLM Chatbot Audit</div>
-      <div class="card-meta">UChicago Session Project | July 2025</div>
-      <div class="card-desc">
-        Engineered a custom interactive chatbot as part of collegiate session coursework. Conducted a detailed socio-ethical audit analyzing safety margins, prompt vulnerabilities, and cultural biases, proposing a validation framework to evaluate transformer responses.
-      </div>
-      <div class="badge-container">
-        <span class="tech-tag">Python</span>
-        <span class="tech-tag">PyTorch</span>
-        <span class="tech-tag">Transformers</span>
-        <span class="tech-tag">Streamlit</span>
-      </div>
-      <div class="card-buttons">
-        <a href="#" class="button"><i class="fa-solid fa-file-lines"></i> Report PDF</a>
-      </div>
-    </div>
-
-    <!-- PROJECT: Curiosity Creators Gamified Software -->
-    <div class="custom-card side-project">
-      <div class="card-img-container">
-        <!-- Reusing existing app preview thumb to keep consistent styling -->
-        <img src="{{ '/assets/cc_app_thumb.png' | prepend: site.baseurl }}" alt="STEM Learning Software">
-      </div>
-      <div class="award-badge">
-        <i class="fa-solid fa-heart-pulse"></i> Social Utility
-      </div>
-      <div class="card-title">STEM Educational Software</div>
-      <div class="card-meta">Curiosity Creators | 10/2024 - Present</div>
-      <div class="card-desc">
-        Engineered custom gamified STEM educational software to simplify coding and math concepts for young students. Currently deployed across the Korea Chapter of Curiosity Creators, contributing to a global outreach of 1,000+ children.
-      </div>
-      <div class="badge-container">
-        <span class="tech-tag">Kotlin</span>
-        <span class="tech-tag">Android SDK</span>
-        <span class="tech-tag">Education Tech</span>
-      </div>
-      <div class="card-buttons">
-        <a href="https://www.curiositycreators.org/home" target="_blank" class="button button-primary"><i class="fa-solid fa-globe"></i> Website</a>
-      </div>
-    </div>
-
-    <!-- PROJECT: KIS Makers Club workshops -->
-    <div class="custom-card side-project">
-      <div class="card-img-container">
-        <img src="{{ '/assets/img/Headshotimg.png' | prepend: site.baseurl }}" style="object-fit: cover;" alt="KIS Makers Club Prototyping">
-      </div>
-      <div class="award-badge">
-        <i class="fa-solid fa-users-gear"></i> Leadership
-      </div>
-      <div class="card-title">Digital Fabrication & Design</div>
-      <div class="card-meta">KIS Makers Club President | 08/2024 - Present</div>
-      <div class="card-desc">
-        Designed workshops covering 3D printing, CAD (SolidWorks), and Arduino prototyping for a 50-member student club. Facilitated a seminar with visiting MIT students focused on solving real-world challenges through design thinking.
-      </div>
-      <div class="badge-container">
-        <span class="tech-tag">3D Printing</span>
-        <span class="tech-tag">CAD / SolidWorks</span>
-        <span class="tech-tag">Arduino</span>
-      </div>
-      <div class="card-buttons">
-        <a href="#" class="button"><i class="fa-solid fa-book-open"></i> Curriculum</a>
-      </div>
-    </div>
-
-    <!-- CERTIFICATE: Korea Code Fair -->
-    <div class="custom-card certificate cert-card">
-      <div class="card-img-container">
-        <img src="{{ '/assets/img/cert_kcf.png' | prepend: site.baseurl }}" alt="Korea Code Fair Certificate">
-      </div>
-      <div class="card-title">Korea Code Fair Semi-Finalist</div>
-      <div class="card-meta">Ministry of Science and ICT | 2025</div>
-      <div class="card-desc">
-        Placed in the Top 70 student developers nationwide for technical innovation and social utility with the SnapPrice Android App, serving as the official preliminary round for ISEF.
-      </div>
-    </div>
-
-    <!-- CERTIFICATE: KSEF -->
-    <div class="custom-card certificate cert-card">
-      <div class="card-img-container">
-        <img src="{{ '/assets/img/cert_ksef.png' | prepend: site.baseurl }}" alt="KSEF Honorable Mention Certificate">
-      </div>
-      <div class="card-title">KSEF Honorable Mention</div>
-      <div class="card-meta">Korea Science & Engineering Fair | 2025</div>
-      <div class="card-desc">
-        Awarded Honorable Mention in the Social Science and Technology division for original research on overcoming the persistence trap in macroeconomic stock forecasts using Transformers.
-      </div>
-    </div>
-
-    <!-- CERTIFICATE: UChicago -->
-    <div class="custom-card certificate cert-card">
-      <div class="card-img-container">
-        <img src="{{ '/assets/img/cert_uchicago.png' | prepend: site.baseurl }}" alt="UChicago Summer Session Certificate">
-      </div>
-      <div class="card-title">Understanding Artificial Intelligence</div>
-      <div class="card-meta">University of Chicago (CMSC 19925) | 2025</div>
-      <div class="card-desc">
-        Successfully completed intensive collegiate coursework covering LLM architectures, neural networks, safety validation, prompt design, and AI socio-ethical impacts.
-      </div>
-    </div>
-
-    <!-- CERTIFICATE: Principal's Honor Roll -->
-    <div class="custom-card certificate cert-card">
-      <div class="card-img-container">
-        <img src="{{ '/assets/img/cert_honor_roll.png' | prepend: site.baseurl }}" alt="Principal's Honor Roll Certificate">
-      </div>
-      <div class="card-title">Principal's Honor Roll</div>
-      <div class="card-meta">Korea International School | 2023 - Present</div>
-      <div class="card-desc">
-        Achieved Academic Distinction for five consecutive semesters by maintaining a cumulative grade point average above 3.66.
-      </div>
-    </div>
-
+    -->
   </div>
 </div>
 
