@@ -25,6 +25,8 @@ $(document).ready(function() {
     $('a[href^="#"]').on('click', smoothScroll)
     buildSnippets();
     initTypewriter();
+    initFilterNav();
+    initLightbox();
   }
 
   function smoothScroll(e) {
@@ -131,6 +133,54 @@ $(document).ready(function() {
     type();
   }
 
+
+  function initFilterNav() {
+    $('.filter-btn').click(function() {
+      var filterValue = $(this).attr('data-filter');
+      
+      // Update active button state
+      $('.filter-btn').removeClass('active');
+      $(this).addClass('active');
+      
+      // Filter cards with a smooth fade effect
+      if (filterValue === 'all') {
+        $('.custom-card').removeClass('hidden');
+      } else {
+        $('.custom-card').each(function() {
+          if ($(this).hasClass(filterValue)) {
+            $(this).removeClass('hidden');
+          } else {
+            $(this).addClass('hidden');
+          }
+        });
+      }
+    });
+  }
+
+  function initLightbox() {
+    // Open Lightbox
+    $('.custom-card.cert-card .card-img-container').click(function(e) {
+      e.preventDefault();
+      var $img = $(this).find('img');
+      var src = $img.attr('src');
+      var title = $(this).siblings('.card-title').text();
+      var org = $(this).siblings('.card-meta').text();
+      
+      if (src) {
+        $('.lightbox-img').attr('src', src);
+        $('.lightbox-caption').html('<strong>' + title + '</strong><br/><span style="font-size:0.85em;color:#ccc;">' + org + '</span>');
+        $('.lightbox-modal').addClass('active');
+      }
+    });
+
+    // Close Lightbox
+    $('.lightbox-close, .lightbox-modal').click(function(e) {
+      if ($(e.target).hasClass('lightbox-img') || $(e.target).hasClass('lightbox-caption') || ($(e.target).closest('.lightbox-content').length && !$(e.target).hasClass('lightbox-close'))) {
+        return;
+      }
+      $('.lightbox-modal').removeClass('active');
+    });
+  }
 
   init();
 
