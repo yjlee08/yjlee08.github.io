@@ -21,6 +21,15 @@ h4 {
 .main-description .fa {
   font-size: 22px;
   margin-top: 5px; }
+.social-icons {
+  margin-top: 10px; }
+.social-icons a {
+  color: #222;
+  font-size: 20px;
+  margin-right: 14px;
+  transition: color 0.2s ease; }
+.social-icons a:hover {
+  color: var(--accent); }
 .paper {
   margin-bottom: 20px }
 .paper .title {

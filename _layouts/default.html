@@ -19,7 +19,7 @@
 
   <link rel="stylesheet" href={{ "/libs/external/skeleton/normalize.css" | prepend: site.baseurl }}>
   <link rel="stylesheet" href={{ "/libs/external/skeleton/skeleton.css" | prepend: site.baseurl }}>
-  <link rel="stylesheet" href={{ "/libs/custom/my_css.css?v=9" | prepend: site.baseurl }}>
+  <link rel="stylesheet" href={{ "/libs/custom/my_css.css?v=10" | prepend: site.baseurl }}>
 
   <script src={{ "/libs/external/jquery-3.1.1.min.js" | prepend: site.baseurl }}></script>
 
@@ -51,6 +51,9 @@
             <h1>{{ site.data.main_info.name }} <span style="display: inline-block; white-space: nowrap; font-size: 0.55em; color: #777; font-weight: 300; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; letter-spacing: normal;">({{ site.data.main_info.korean_name }})</span></h1>
             <p>{{ site.data.main_info.title }}</p>
             <p style="color: var(--accent); font-weight: 500;">{{ site.data.main_info.email }}</p>
+            <div class="social-icons">
+              <a href="https://github.com/yjlee08" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
         </div>
       </div>
     </section>
