@@ -20,7 +20,7 @@
   <link rel="stylesheet" href={{ "/assets/css/vendors/normalize.css" | prepend: site.baseurl }}>
   <link rel="stylesheet" href={{ "/assets/css/vendors/skeleton.css" | prepend: site.baseurl }}>
   <link rel="stylesheet" href={{ "/assets/css/vendors/skeleton-tabs.css" | prepend: site.baseurl }}>
-  <link rel="stylesheet" href={{ "/assets/css/main.css?v=13" | prepend: site.baseurl }}>
+  <link rel="stylesheet" href={{ "/assets/css/main.css?v=14" | prepend: site.baseurl }}>
 
   <!-- FontAwesome via CDN for speed and caching -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -37,7 +37,16 @@
 
   <div class="container">
 
-    <section class="header">
+    <section class="header" style="position: relative;">
+      <div class="seoul-time-widget" id="seoul-time-widget">
+        <div class="seoul-time-icon">
+          <i class="fa-solid fa-clock ticking-clock"></i>
+        </div>
+        <div class="seoul-time-text">
+          <span class="seoul-label">Seoul Time</span>
+          <span id="seoul-clock">--:--</span>
+        </div>
+      </div>
       <div class="row">
         <div class="three columns">
           <a href="{{ site.baseurl }}/"><img class="u-max-full-width" src='{{ site.baseurl }}{{ site.data.main_info.profile_pic }}?v=2'></a>
@@ -81,16 +90,6 @@
   {% include google_analytics.html %}
 
   <span id="62cd7b7da1aff3196fdc26b60e396df9"></span>
-
-  <div class="seoul-time-widget" id="seoul-time-widget">
-    <div class="seoul-time-icon">
-      <i class="fa-solid fa-clock ticking-clock"></i>
-    </div>
-    <div class="seoul-time-text">
-      <span class="seoul-label">Seoul Time</span>
-      <span id="seoul-clock">--:--</span>
-    </div>
-  </div>
 
 </body>
 </html>

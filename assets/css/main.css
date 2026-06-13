@@ -657,25 +657,19 @@ h4 {
 
 /* Seoul Time Widget */
 .seoul-time-widget {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  border-radius: 30px;
-  padding: 8px 16px;
+  position: absolute;
+  top: -35px;
+  right: 0;
   display: flex;
   align-items: center;
-  gap: 10px;
-  z-index: 1000;
+  gap: 8px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
 }
 
 .seoul-time-widget:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  opacity: 1;
 }
 
 .seoul-time-icon {
@@ -718,11 +712,11 @@ h4 {
   color: #222;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 680px) {
   .seoul-time-widget {
-    bottom: 15px;
-    right: 15px;
-    padding: 6px 12px;
+    top: -30px;
+    right: 50%;
+    transform: translateX(50%);
   }
 }
 
