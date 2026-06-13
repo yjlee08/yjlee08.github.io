@@ -130,8 +130,10 @@ h4 {
   line-height: normal;
   transition: color 0.2s ease;
 }
-.navbar-link:hover {
-  color: var(--accent-hover);
+@media (hover: hover) {
+  .navbar-link:hover {
+    color: var(--accent-hover);
+  }
 }
 .navbar-link.active {
   color: var(--accent);
@@ -256,8 +258,10 @@ h4 {
     line-height: 6.5rem;
     color: #222;
     transition: color 0.2s ease; }
-  .navbar-link:hover {
-    color: var(--accent-hover); }
+  @media (hover: hover) {
+    .navbar-link:hover {
+      color: var(--accent-hover); }
+  }
   .navbar-link.active {
     color: var(--accent); }
   .has-docked-nav .navbar {
@@ -769,9 +773,13 @@ h4 {
   background-color: var(--accent, #0f6e56);
   transition: width 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.navbar-link.active::after,
-.navbar-link:hover::after {
+.navbar-link.active::after {
   width: 100%;
+}
+@media (hover: hover) {
+  .navbar-link:hover::after {
+    width: 100%;
+  }
 }
 @media (min-width: 750px) {
   .navbar-link::after {
