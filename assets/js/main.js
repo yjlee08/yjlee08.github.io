@@ -218,4 +218,25 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   init();
+
+  // Seoul Time Widget Logic
+  function updateSeoulTime() {
+    const clockEl = document.getElementById('seoul-clock');
+    if (!clockEl) return;
+    
+    const now = new Date();
+    // Format options for Seoul time
+    const options = { 
+      timeZone: 'Asia/Seoul', 
+      hour: '2-digit', 
+      minute: '2-digit', 
+      second: '2-digit',
+      hour12: true 
+    };
+    
+    clockEl.textContent = new Intl.DateTimeFormat('en-US', options).format(now);
+  }
+
+  setInterval(updateSeoulTime, 1000);
+  updateSeoulTime();
 });
