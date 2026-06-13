@@ -33,6 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initTypewriter();
     initFilterNav();
     initLightbox();
+    initScrollReveal();
+    initActiveNav();
   }
 
   function smoothScroll(e) {
@@ -215,6 +217,54 @@ document.addEventListener('DOMContentLoaded', function() {
         lightboxModal.classList.remove('active');
       });
     });
+  }
+
+  function initScrollReveal() {
+    const revealElements = document.querySelectorAll('.reveal-on-scroll');
+    if (revealElements.length === 0) return;
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.15
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  }
+
+  function initActiveNav() {
+    const sections = document.querySelectorAll('.docs-section');
+    const navLinks = document.querySelectorAll('.navbar-link');
+    if (sections.length === 0 || navLinks.length === 0) return;
+
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Remove active class from all links
+          navLinks.forEach(link => link.classList.remove('active'));
+          
+          // Add active class to the intersecting section's corresponding link
+          const activeId = entry.target.getAttribute('id');
+          const activeLink = document.querySelector(`.navbar-link[href="#${activeId}"]`);
+          if (activeLink) {
+            activeLink.classList.add('active');
+          }
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '-50% 0px -50% 0px', // Trigger when section is in the middle of the screen
+      threshold: 0
+    });
+
+    sections.forEach(section => navObserver.observe(section));
   }
 
   init();
