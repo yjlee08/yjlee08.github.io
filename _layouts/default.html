@@ -17,22 +17,17 @@
 
   <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href={{ "/libs/external/skeleton/normalize.css" | prepend: site.baseurl }}>
-  <link rel="stylesheet" href={{ "/libs/external/skeleton/skeleton.css" | prepend: site.baseurl }}>
-  <link rel="stylesheet" href={{ "/libs/custom/my_css.css?v=10" | prepend: site.baseurl }}>
+  <link rel="stylesheet" href={{ "/assets/css/vendors/normalize.css" | prepend: site.baseurl }}>
+  <link rel="stylesheet" href={{ "/assets/css/vendors/skeleton.css" | prepend: site.baseurl }}>
+  <link rel="stylesheet" href={{ "/assets/css/vendors/skeleton-tabs.css" | prepend: site.baseurl }}>
+  <link rel="stylesheet" href={{ "/assets/css/main.css?v=11" | prepend: site.baseurl }}>
 
-  <script src={{ "/libs/external/jquery-3.1.1.min.js" | prepend: site.baseurl }}></script>
+  <!-- FontAwesome via CDN for speed and caching -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <link rel="stylesheet" href={{ "/libs/external/fontawesome-free-6.6.0-web/css/all.min.css" | prepend: site.baseurl }}>
-
-  <link rel="stylesheet" href={{ "/libs/external/academicons-1.8.6/css/academicons.min.css" | prepend: site.baseurl }}>
-
-  <link rel="stylesheet" href={{ "/libs/external/skeleton_tabs/skeleton-tabs.css" | prepend: site.baseurl }}>
-  <script src={{ "/libs/external/skeleton_tabs/skeleton-tabs.js" | prepend: site.baseurl }}></script>
-
-  <link rel="stylesheet" href={{ "/libs/external/timeline.css" | prepend: site.baseurl }}>
-
-  <script src={{ "/libs/custom/my_js.js" | prepend: site.baseurl }}></script>
+  <!-- Scripts loaded with defer to not block page rendering -->
+  <script src={{ "/assets/js/tabs.js" | prepend: site.baseurl }} defer></script>
+  <script src={{ "/assets/js/main.js" | prepend: site.baseurl }} defer></script>
 
   <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png?v=6">
   <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/favicon.png?v=6">
