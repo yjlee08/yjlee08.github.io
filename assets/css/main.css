@@ -362,13 +362,7 @@ h4 {
 .typewriter-cursor {
   font-weight: 300;
   color: var(--accent);
-  animation: typewriter-blink 1s step-end infinite;
   margin-left: 2px;
-}
-
-@keyframes typewriter-blink {
-  from, to { color: transparent; }
-  50% { color: var(--accent); }
 }
 
 .academic-date {
