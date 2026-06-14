@@ -120,10 +120,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function type() {
       const currentPhrase = phrases[phraseIndex];
+      let text = currentPhrase.substring(0, characterIndex);
       
       if (isDeleting) {
         characterIndex--;
-        textEl.textContent = currentPhrase.substring(0, characterIndex);
+        text = currentPhrase.substring(0, characterIndex);
+        if (text.endsWith(' ')) {
+          text = text.slice(0, -1) + '&nbsp;';
+        }
+        textEl.innerHTML = text;
         
         if (characterIndex === 0) {
           isDeleting = false;
@@ -134,7 +139,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       } else {
         characterIndex++;
-        textEl.textContent = currentPhrase.substring(0, characterIndex);
+        text = currentPhrase.substring(0, characterIndex);
+        if (text.endsWith(' ')) {
+          text = text.slice(0, -1) + '&nbsp;';
+        }
+        textEl.innerHTML = text;
         
         if (characterIndex === currentPhrase.length) {
           isDeleting = true;
