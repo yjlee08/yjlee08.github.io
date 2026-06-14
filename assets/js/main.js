@@ -133,9 +133,10 @@ document.addEventListener('DOMContentLoaded', function() {
         textEl.innerHTML = text;
         
         if (characterIndex === 0) {
+          if (cursorEl) cursorEl.classList.add('blink');
           isDeleting = false;
           phraseIndex = (phraseIndex + 1) % phrases.length;
-          setTimeout(type, 500);
+          setTimeout(type, 1000);
         } else {
           setTimeout(type, 30);
         }
