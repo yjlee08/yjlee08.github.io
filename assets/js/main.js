@@ -288,4 +288,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
   setInterval(updateSeoulTime, 1000);
   updateSeoulTime();
+
+  // Widget Click Animation
+  const seoulWidget = document.getElementById('seoul-time-widget');
+  if (seoulWidget) {
+    seoulWidget.addEventListener('click', function() {
+      // Reset animation if clicked rapidly
+      this.classList.remove('jump');
+      void this.offsetWidth; // Trigger reflow
+      this.classList.add('jump');
+      
+      // Remove class after animation completes (500ms)
+      setTimeout(() => {
+        this.classList.remove('jump');
+      }, 500);
+    });
+  }
 });
