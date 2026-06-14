@@ -365,6 +365,15 @@ h4 {
   margin-left: 2px;
 }
 
+.typewriter-cursor.blink {
+  animation: typewriter-blink 1s step-end infinite;
+}
+
+@keyframes typewriter-blink {
+  from, to { color: transparent; }
+  50% { color: var(--accent); }
+}
+
 .academic-date {
   text-align: right;
   font-style: italic;

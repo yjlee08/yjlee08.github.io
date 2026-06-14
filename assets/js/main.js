@@ -115,6 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let characterIndex = 0;
     let isDeleting = false;
     const textEl = document.getElementById("typewriter-text");
+    const cursorEl = document.querySelector(".typewriter-cursor");
     
     if (!textEl) return;
 
@@ -123,6 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
       let text = currentPhrase.substring(0, characterIndex);
       
       if (isDeleting) {
+        if (cursorEl) cursorEl.classList.remove('blink');
         characterIndex--;
         text = currentPhrase.substring(0, characterIndex);
         if (text.endsWith(' ')) {
@@ -138,6 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
           setTimeout(type, 30);
         }
       } else {
+        if (cursorEl) cursorEl.classList.remove('blink');
         characterIndex++;
         text = currentPhrase.substring(0, characterIndex);
         if (text.endsWith(' ')) {
@@ -146,6 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
         textEl.innerHTML = text;
         
         if (characterIndex === currentPhrase.length) {
+          if (cursorEl) cursorEl.classList.add('blink');
           isDeleting = true;
           setTimeout(type, 2500);
         } else {
